@@ -38,6 +38,7 @@ public class UserController : ControllerBase
             await _userService.AddAsync(entity);
             return Ok("register successful");
 
+
         }
         catch (Exception e)
         {
