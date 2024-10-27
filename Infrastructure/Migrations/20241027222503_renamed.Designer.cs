@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241027215935_NewClasses")]
-    partial class NewClasses
+    [Migration("20241027222503_renamed")]
+    partial class renamed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -120,7 +120,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Classes");
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserGroup", b =>
@@ -142,7 +142,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId", "classesId");
 
-                    b.ToTable("UserClasses");
+                    b.ToTable("UserGroups");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
