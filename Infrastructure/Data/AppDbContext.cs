@@ -13,13 +13,16 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
         
     }
 
-    public DbSet<Group> Classes { get; set; }
-    public DbSet<UserGroup> UserClasses { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<UserGroup> UserGroups { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
 
+
         builder.ApplyConfiguration(new UserClassesConfig());
+        builder.ApplyConfiguration(new GroupConfig());
+
     }
 }
