@@ -19,7 +19,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetById(string id)
     {
         try
-        {
+        {   
             var res = await _userService.GetUserClassesByIdAsync(id);
             return Ok(res);
         }
