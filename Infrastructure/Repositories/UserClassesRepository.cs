@@ -7,24 +7,24 @@ namespace Infrastructure.Repositories;
 
 public class UserClassesRepository : IUserClassesRepository
 {
-    private DbSet<UserClass> _userClasses;
+    private DbSet<UserGroup> _userClasses;
     public UserClassesRepository(AppDbContext appDbContext)
     {
-        _userClasses = appDbContext.Set<UserClass>();
+        _userClasses = appDbContext.Set<UserGroup>();
     }
-    public async Task<UserClass> GetByIdAsync(Guid id)
+    public async Task<UserGroup> GetByIdAsync(Guid id)
     {
         var userClass =await _userClasses.FindAsync(id);
         return userClass;
     }
 
-    public async Task<IEnumerable<UserClass>> GetAllAsync()
+    public async Task<IEnumerable<UserGroup>> GetAllAsync()
     {
         var userClasses =await _userClasses.ToListAsync();
         return userClasses;
     }
 
-    public async Task AddAsync(UserClass entity)
+    public async Task AddAsync(UserGroup entity)
     {
         await _userClasses.AddAsync(entity);
     }

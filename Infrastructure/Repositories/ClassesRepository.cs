@@ -7,26 +7,26 @@ namespace Infrastructure.Repositories;
 
 public class ClassesRepository : IClassesRepository
 {
-    private DbSet<Class> _classes;
+    private DbSet<Group> _classes;
 
     public ClassesRepository(AppDbContext context)
     {
-        _classes = context.Set<Class>();
+        _classes = context.Set<Group>();
     }
 
-    public async Task<Class> GetByIdAsync(Guid id)
+    public async Task<Group> GetByIdAsync(Guid id)
     {
         var classes = await _classes.FindAsync(id);
         return classes;
     }
 
-    public async Task<IEnumerable<Class>> GetAllAsync()
+    public async Task<IEnumerable<Group>> GetAllAsync()
     {
         var classes = await _classes.ToListAsync();
         return classes;
     }
 
-    public async Task AddAsync(Class entity)
+    public async Task AddAsync(Group entity)
     {
         await _classes.AddAsync(entity);
     }

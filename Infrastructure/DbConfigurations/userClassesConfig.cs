@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.DbConfigurations;
 
-public class UserClassesConfig : IEntityTypeConfiguration<UserClass>
+public class UserClassesConfig : IEntityTypeConfiguration<UserGroup>
 {
-    public void Configure(EntityTypeBuilder<UserClass> builder)
+    public void Configure(EntityTypeBuilder<UserGroup> builder)
     {
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id).ValueGeneratedOnAdd();
@@ -21,7 +21,7 @@ public class UserClassesConfig : IEntityTypeConfiguration<UserClass>
             .OnDelete(DeleteBehavior.Cascade);
 
         builder
-            .HasOne(x => x.Class)
+            .HasOne(x => x.Group)
             .WithMany(x => x.UserClasses)
             .HasForeignKey(x => x.classesId)
             .OnDelete(DeleteBehavior.Cascade);

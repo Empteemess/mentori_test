@@ -3,27 +3,23 @@ using Domain.Entities;
 
 namespace Application.Mappers;
 
-public static class ClassesMappers
+public static class GroupsMappers
 {
-    public static ClassesDto MapToClassesDto(this Class source)
+    public static ClassesDto MapToClassesDto(this Group source)
     {
         var classDto = new ClassesDto()
         {
             Id = source.Id,
-            days = source.days,
-            Hours = source.Hours,
             OwnerId = source.OwnerId,
         };
         
         return classDto;
     }
 
-    public static Class MapToClasses(this AddClassesDto source)
+    public static Group MapToClasses(this AddClassesDto source)
     {
-        var clas = new Class()
+        var clas = new Group()
         {
-            days = source.days,
-            Hours = source.Hours,
             OwnerId = source.OwnerId,
         };
 

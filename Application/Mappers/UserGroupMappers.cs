@@ -3,11 +3,11 @@ using Domain.Entities;
 
 namespace Application.Mappers;
 
-public static class UserClassMappers
+public static class UserGroupMappers
 {
-    public static UserClass MapToUserClasses(this AddUserClassDto addUserClassDto)
+    public static UserGroup MapToUserClasses(this AddUserClassDto addUserClassDto)
     {
-        var userclasses = new UserClass()
+        var userclasses = new UserGroup()
         {
             UserId = addUserClassDto.UserId,
             classesId = addUserClassDto.classesId

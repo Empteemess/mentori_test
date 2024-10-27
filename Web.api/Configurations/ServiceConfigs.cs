@@ -26,9 +26,9 @@ public static class ServiceConfigs
         services.AddScoped<IClassesRepository, ClassesRepository>();
         services.AddScoped<IUserClassesRepository, UserClassesRepository>();
         
-        services.AddScoped<IClassesService, ClassesService>();
+        services.AddScoped<IClassesService, GroupService>();
         services.AddScoped<IUserService, UserService>();
-        services.AddScoped<IUserClassesService, UserClassesService>();
+        services.AddScoped<IUserClassesService, UserGroupService>();
         
         return services;
     }

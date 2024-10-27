@@ -13,5 +13,5 @@ public class UserClassesResponseDto
     public string? FirstName { get; set; }
     [MaxLength(25)]
     public string? LastName { get; set; }
-    public IEnumerable<Class> Classes { get; set; }
+    public IEnumerable<Group> Classes { get; set; }
 }

@@ -5,11 +5,11 @@ using Domain.IRepositories;
 
 namespace Application.Services;
 
-public class ClassesService : IClassesService
+public class GroupService : IClassesService
 {
     private readonly IUnitOfWork _unitOfWork;
 
-    public ClassesService(IUnitOfWork unitOfWork)
+    public GroupService(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
     }

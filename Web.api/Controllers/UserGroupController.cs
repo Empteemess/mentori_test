@@ -8,11 +8,11 @@ namespace Web.api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserClassesController : ControllerBase
+public class UserGroupController : ControllerBase
 {
     private readonly IUserClassesService _userClassesService;
 
-    public UserClassesController(IUserClassesService userClassesService)
+    public UserGroupController(IUserClassesService userClassesService)
     {
         _userClassesService = userClassesService;
     }

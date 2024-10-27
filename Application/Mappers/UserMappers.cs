@@ -15,7 +15,6 @@ public static class UserMappers
             BirthYear = applicationUser.BirthYear,
             Degree = applicationUser.Degree,
             Gender = applicationUser.Gender,
-            Role = applicationUser.Role,
         };
         
         return res;

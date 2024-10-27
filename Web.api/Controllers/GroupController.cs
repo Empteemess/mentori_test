@@ -6,11 +6,11 @@ namespace Web.api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ClassesController : ControllerBase
+public class GroupController : ControllerBase
 {
     private readonly IClassesService _classesService;
 
-    public ClassesController(IClassesService classesService)
+    public GroupController(IClassesService classesService)
     {
         _classesService = classesService;
     }

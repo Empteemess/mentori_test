@@ -13,8 +13,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
         
     }
 
-    public DbSet<Class> Classes { get; set; }
-    public DbSet<UserClass> UserClasses { get; set; }
+    public DbSet<Group> Classes { get; set; }
+    public DbSet<UserGroup> UserClasses { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
