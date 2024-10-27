@@ -15,7 +15,7 @@ public class GroupController : ControllerBase
         _classesService = classesService;
     }
 
-    [HttpPost("group")]
+    [HttpPost]
     public async Task<IActionResult> AddGroup([FromBody] AddClassesDto addClassesDto)
     {
         try
